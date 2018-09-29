@@ -41,7 +41,8 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false,
     },
     isAdult: {
-      type:DataTypes.BOOLEAN
+      type:DataTypes.BOOLEAN,
+      allowNull: false,
     }
   });
   return User;
