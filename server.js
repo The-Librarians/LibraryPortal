@@ -23,7 +23,9 @@ app.engine(
 app.set("view engine", "handlebars");
 
 // Routes
-require("./routes/apiRoutes")(app);
+require("./routes/books-api-route")(app);
+require("./routes/media-api-route")(app);
+require("./routes/users-api-route")(app);
 require("./routes/htmlRoutes")(app);
 
 var syncOptions = { force: false };

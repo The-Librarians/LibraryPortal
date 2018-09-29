@@ -1,5 +1,4 @@
-DROP DATABASE IF EXISTS exampledb;
-CREATE DATABASE exampledb;
+DROP DATABASE IF EXISTS libraryPortal_db;
+CREATE DATABASE libraryPortal_db;
 
-DROP DATABASE IF EXISTS testdb;
-CREATE DATABASE testdb;
+
