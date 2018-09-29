@@ -41,16 +41,7 @@ module.exports = function(app) {
     });
   });
 
-  //Search by Audience
-  app.get("api/books/audience/:audience", function(req, res) {
-    db.Books.findAll({
-      where: {
-        audience: req.params.audience
-      }
-    }).then(function(results) {
-      res.json(results);
-    });
-  });
+  
 
   // Create a new book
   app.post("/api/books", function(req, res) {

@@ -35,6 +35,13 @@ module.exports = function(sequelize, DataTypes) {
       validate: {
         len: [1, 150]
       }
+    },
+    isChild:{
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
+    isAdult: {
+      type:DataTypes.BOOLEAN
     }
   });
   return User;

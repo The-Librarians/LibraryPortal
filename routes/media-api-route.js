@@ -42,16 +42,7 @@ module.exports = function(app) {
     });
   });
   
-  //Search by Audience
-  app.get("api/media/audience/:audience", function(req,res){
-    db.Media.findAll({
-      where:{
-        audience:req.params.audience
-      }
-    }).then(function(results){
-      res.json(results);
-    });
-  });
+  
 
   // Create new media
   app.post("/api/media", function(req, res) {
