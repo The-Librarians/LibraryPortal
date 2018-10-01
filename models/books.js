@@ -16,11 +16,8 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
     description: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: false,
-      validate: {
-        len: [1, 250]
-      }
     },
     genre: {
       type: DataTypes.STRING,
@@ -35,6 +32,10 @@ module.exports = function(sequelize, DataTypes) {
       validate: {
         len: [1, 150]
       }
+    },
+    isCheckedOut: {
+      type:DataTypes.BOOLEAN,
+      allowNull: false
     }
   });
   return Books;
