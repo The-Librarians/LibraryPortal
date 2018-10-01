@@ -1,0 +1,41 @@
+<h3>Patrons of Library</h3>
+<div class="container">
+  <div class="row">
+    <div class="col-8 offset-2">
+      <div class="card mt-4">
+        <div class="card-body">
+          <h5 class="card-title">Patrons</h5>
+          <ul id="example-list" class="list-group">
+            {{#each newUser}}
+            <li data-id="{{this.id}}" class="list-group-item">
+              <p>
+                <strong>Id</strong>: {{this.id}}
+              </p>
+              <p>
+                <strong>Name</strong>: {{this.name}}
+              </p>
+              <p>
+                <strong>Phone</strong>: {{this.phone}}
+              </p>
+              <p>
+                <strong>Email</strong>: {{this.email}}
+              </p>
+              <p>
+                <strong>Card Number</strong>: {{this.cardNumber}}
+              </p>
+              <p>
+                <strong>Child</strong>: {{this.isChild}}
+              </p>
+              <p>
+                <strong>Adult</strong>: {{this.isAdult}}
+              </p>
+            </li>
+            {{/each}}
+          </ul>
+
+          <a href="/">← Back To Home</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
