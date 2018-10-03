@@ -51,7 +51,8 @@ module.exports = function(app) {
       author: req.body.author,
       description: req.body.description,
       genre: req.body.genre,
-      audience: req.body.audience
+      audience: req.body.audience,
+      isCheckedOut: req.body.isCheckedOut
     }).then(function(results) {
       res.json(results);
     });
@@ -64,7 +65,8 @@ module.exports = function(app) {
         title: req.body.title,
         author: req.body.author,
         genre: req.body.genre,
-        audience: req.body.audience
+        audience: req.body.audience,
+        isCheckedOut:req.body.isCheckedOut
       },
       {
         where: {
