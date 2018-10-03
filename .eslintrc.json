@@ -37,7 +37,10 @@
         "semi": [
             "error",
             "always"
-        ],
-        "prettier/prettier": "error"
+        ]
+<<<<<<< HEAD
+=======
+        
+>>>>>>> c6acd25131a879c2eed3505acb817c0865763389
     }
 }

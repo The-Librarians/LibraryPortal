@@ -1,9 +1,9 @@
 {
   "development": {
     "username": "root",
-    "password": "yourpassword",
-    "database": "passport",
-    "host": "127.0.0.1",
+    "password": "udU&8Ma2nE17",
+    "database": "libraryPortal_db",
+    "host": "localhost",
     "dialect": "mysql"
   },
   "test": {

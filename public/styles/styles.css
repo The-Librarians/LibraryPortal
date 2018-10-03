@@ -1,3 +1,88 @@
+
 .list-group-item {
   line-height: 2.5;
+}
+
+
+/* PATRON LANDING PAGE */
+/* ---------------------------------- */
+
+/* Catalog */
+#catalog-search {
+  min-height: 545px;
+  background-color: rgb(204, 204, 204);
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+#catalog-form {
+  margin: 20px;
+  margin-top: 10px;
+}
+
+#catalog-search-bar {
+  width: 100%;
+  margin: 0;
+  border: 0px;
+}
+
+#catalog-search-button {
+  background-color: #BAD29F;
+  color: #2C497F;
+  margin-top: 10px;
+}
+
+/* Patron info */
+#patron-info {
+  /* min-height: 200px; */
+  margin-bottom: 30px;
+  text-align: left;
+  line-height: 0px;
+}
+
+.patron-info-items {
+  margin: 0;
+}
+
+#patron-info-div {
+  margin-bottom: 20px;
+}
+
+/* Tabs */
+ul.tabs{
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+ul.tabs li{
+  background: none;
+  color: #222;
+  display: inline-block;
+  padding: 5px 10px;;
+  cursor: pointer;
+}
+
+ul.tabs li.current{
+  background: #ededed;
+  color: #222;
+}
+
+.tab-content{
+  display: none;
+  background: #ededed;
+  padding: 10px;
+  margin: 0;
+  min-height: 422px;
+}
+
+.tab-content.current{
+  display: inherit;
+}
+
+li {
+  margin: 0;
+}
+
+.main-contain {
+  margin-top: 20px;
 }

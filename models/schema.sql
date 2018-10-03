@@ -1,5 +1,2 @@
-DROP DATABASE IF EXISTS passport;
-CREATE DATABASE passport;
-
-DROP DATABASE IF EXISTS testdb;
-CREATE DATABASE testdb;
+DROP DATABASE IF EXISTS libraryPortal_db;
+CREATE DATABASE libraryPortal_db;
