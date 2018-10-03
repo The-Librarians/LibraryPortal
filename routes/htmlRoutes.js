@@ -8,8 +8,12 @@ module.exports = function(app) {
   });
 
   //Load all users
-  app.get("/users", function(req, res) {
-    db.User.findAll({}).then(function(results) {
+  app.get("/users/:id", function(req, res) {
+    db.User.findOne({
+      where:{
+        id: req.params.id
+      }
+    }).then(function(results) {
       res.render("patrons", {
         newUser: results
       });

@@ -24,12 +24,12 @@
                     <div id='patron-side'>
                         <div id="patron-info">
                         
-                            <h1 class="patron-info-items">Welcome, <span id="patron-name" >  </span>!</h1>
+                            <h1 class="patron-info-items">Welcome, <span id="patron-name" > {{newUser.name}} </span>!</h1>
                            
                             <br>
-                            <h4 class="patron-info-items">Card number: <span id="patron-cardno">26150</span></h4>
+                            <h4 class="patron-info-items">Card number: <span id="patron-cardno">{{newUser.cardNumber}}</span></h4>
                             <br>
-                            <h5 class="patron-info-items">Patron since: <span id="patron-add-date">04/06/2018</span></h5>
+                            <h5 class="patron-info-items">Patron since: <span id="patron-add-date">{{newUser.createdAt}}</span></h5>
                         </div>
 
                         <div class="patron-tabs">
