@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "udU&8Ma2nE17",
+    "password": "password",
     "database": "libraryPortal_db",
     "host": "localhost",
     "dialect": "mysql"
