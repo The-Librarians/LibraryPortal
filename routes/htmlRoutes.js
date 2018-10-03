@@ -7,14 +7,21 @@ module.exports = function(app) {
     });
   });
 
-  // Load all users
+  //Load all users
   app.get("/users", function(req, res) {
     db.User.findAll({}).then(function(results) {
-      res.render("user", {
+      res.render("patrons", {
         newUser: results
       });
     });
   });
+
+  // //app.get("/users", function(req,res){
+  //   res.render("patrons", {
+      
+  //   })
+      
+  // })
 
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
