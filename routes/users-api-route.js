@@ -15,7 +15,9 @@ module.exports = function(app) {
       phone: req.body.phone,
       email: req.body.email,
       cardNumber: req.body.cardNumber,
-      password: req.body.password
+      password: req.body.password,
+      isChild: req.body.isChild,
+      isAdult: req.body.isAdult
     }).then(function(results) {
       res.json(results);
     });
@@ -29,7 +31,10 @@ module.exports = function(app) {
         phone: req.body.phone,
         email: req.body.email,
         cardNumber: req.body.cardNumber,
-        password: req.body.password
+        password: req.body.password,
+        isChild: req.body.isChild,
+        isAdult: req.body.isAdult
+
       },
       {
         where: {
