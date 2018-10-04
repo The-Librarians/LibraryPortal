@@ -23,6 +23,10 @@ nav {
   text-decoration: none;
 }
 
+#logo:hover {
+  color: #ffffff;
+}
+
 .list-group-item {
   line-height: 2.5;
 }
@@ -78,6 +82,14 @@ nav {
 .standard-button:hover {
   background-color: #1a797e;
   color: #ffffff;
+}
+
+.librarian-button {
+  width: 300px;
+}
+
+.librarian-button:first-child {
+  margin-top: 0;
 }
 
 /* Patron info */
