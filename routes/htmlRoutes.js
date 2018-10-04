@@ -20,12 +20,12 @@ module.exports = function(app) {
     });
   });
 
-  // //app.get("/users", function(req,res){
-  //   res.render("patrons", {
+  app.get("/books", function(req,res){
+    res.render("librarian", {
       
-  //   })
+    })
       
-  // })
+  })
 
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
