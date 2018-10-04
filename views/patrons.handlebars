@@ -1,69 +1,73 @@
 <body>
-        <nav>
-            <div class="container">
-                <a href="/" id="logo">Library Portal</a>
-            </div>
-        </nav>
-
-
-        <!-- columns should be the immediate child of a .row -->
-        <div class="container main-contain">
-            <!-- columns should be the immediate child of a .row -->
-            <div id="patron-info">
-                <div class="row">
-                    <h1 class="patron-info-items">Welcome, <span id="patron-name"> {{newUser.name}} </span>!</h1>
-
-                    <br>
-                    <h4 class="patron-info-items">Card number: <span id="patron-cardno">{{newUser.cardNumber}}</span></h4>
-                    <br>
-                    <h5 class="patron-info-items">Patron since: <span id="patron-add-date">{{newUser.createdAt}}</span></h5>
-                </div>
-            </div>
-                <h3>Catalog Search —</h3>
-
-
-                <div class="row main-row">
-                    <div class="one-half column catalog-div">
-                        <div class="div-styling" id="catalog-search">
-                            <div id="catalog-form">
-                                <form>
-                                    <input type="search" placeholder="Find your next adventure..." id="catalog-search-bar">
-                                    <br>
-                                    <button class="standard-button">EXPLORE</button>
-                                </form>
-                            </div>
-                            <div id="catalog-populate">
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="one-half column">
-                        <div id='patron-side'>
-
-                            <div class="patron-tabs">
-                                <ul class="tabs">
-                                    <li class="tab-link current" data-tab="tab-1">Items Out</li>
-                                    <li class="tab-link" data-tab="tab-2">Wishlist</li>
-                                    <li class="tab-link" data-tab="tab-3">History</li>
-                                </ul>
-
-                                <div id="tab-1" class="tab-content current">
-                                    Items Out
-                                </div>
-                                <div id="tab-2" class="tab-content">
-                                    Wishlist
-                                </div>
-                                <div id="tab-3" class="tab-content">
-                                    History
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+    <nav>
+        <div class="container">
+            <a href="/" id="logo">Library Portal</a>
         </div>
-    </body>
+    </nav>
+
+
+    <!-- columns should be the immediate child of a .row -->
+    <div class="container main-contain">
+        <!-- columns should be the immediate child of a .row -->
+        <div id="patron-info">
+            <div class="row">
+                <h1 class="patron-info-items">Welcome, <span id="patron-name"> {{newUser.name}} </span>!</h1>
+
+                <br>
+                <h4 class="patron-info-items">Card number: <span id="patron-cardno">{{newUser.cardNumber}}</span></h4>
+                <br>
+                <h5 class="patron-info-items">Patron since: <span id="patron-add-date">{{newUser.createdAt}}</span></h5>
+            </div>
+        </div>
+        <h3>Catalog Search —</h3>
+
+
+        <div class="row main-row">
+            <div class="one-half column catalog-div">
+                <div class="div-styling" id="catalog-search">
+                    <div id="catalog-form">
+                        <form>
+                            <input type="search" placeholder="Find your next adventure..." id="catalog-search-bar">
+                            <br>
+                            <button class="standard-button">EXPLORE</button>
+                        </form>
+                    </div>
+                    <div id="catalog-populate">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="one-half column">
+                <div id='patron-side'>
+
+                    <div class="patron-tabs">
+                        <ul class="tabs">
+                            <li class="tab-link current" data-tab="tab-1">Items Out</li>
+                            <li class="tab-link" data-tab="tab-2">Wishlist</li>
+                            <li class="tab-link" data-tab="tab-3">History</li>
+                        </ul>
+
+                        <div id="tab-1" class="tab-content current">
+                            Items Out
+                        </div>
+                        <div id="tab-2" class="tab-content">
+                            Wishlist
+                        </div>
+                        <div id="tab-3" class="tab-content">
+                            History
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+        crossorigin="anonymous"></script>
+    <script src="public/js/tabs.js"></script>
+</body>
