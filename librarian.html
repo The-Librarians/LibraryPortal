@@ -26,6 +26,7 @@
     <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="icon" type="image/png" href="images/favicon.png">
+    <script src="jquery-3.3.1.min.js"></script>
 
 </head>
 
@@ -46,14 +47,15 @@
                 </h2>
 
                 <!--HandleBar Stats Placeholder-->
-            </div>   <!---Replace this div with forms-->
+            </div>
+            <!---Replace this div with forms-->
             <div class="six columns">
 
-                <input class="button-primary" type="submit" value="Create/Update Patron">
+                <input class="button-user" type="submit" value="Create/Update Patron">
                 <br>
-                <input class="button-primary" type="submit" value="Create/Update Book Records">
+                <input class="button-book" type="submit" value="Create/Update Book Records">
                 <br>
-                <input class="button-primary" type="submit" value="Create/Update Media Records">
+                <input class="button-media" type="submit" value="Create/Update Media Records">
 
 
             </div>
@@ -61,7 +63,8 @@
         <br>
         <br>
         <!--User Input Form-->
-        <form>
+        <div class="first">
+        <form id="userInput" style="display:none" class="user-div">
             <div class="row">
                 <div class="six columns">
                     <label for="nameInput">Your Full Name</label>
@@ -93,10 +96,12 @@
             </div>
             <input class="button-primary" type="submit" value="Submit">
         </form>
-<br>
-<br>
-    <!--Book Input Form-->
-    <form>
+        </div>
+        <br>
+        <br>
+        <!--Book Input Form-->
+        <div class="second">
+        <form id="bookInput" style="display:none;" class="book-div">
             <div class="row">
                 <div class="six columns">
                     <label for="bookTitleInput">Book Title</label>
@@ -107,29 +112,31 @@
                     <input class="u-full-width" type="name" placeholder="Author" id="authorInput">
                 </div>
             </div>
-                <div class="row">
+            <div class="row">
                 <div class="six columns">
                     <label for="genreInput">Book Genre</label>
                     <input class="u-full-width" type="name" placeholder="Fiction" id="genreInput">
                 </div>
                 <div class="six columns">
-                        <label for="audienceInput">Audience</label>
-                        <input class="u-full-width" type="name" placeholder="Adult" id="audienceInput">
+                    <label for="audienceInput">Audience</label>
+                    <input class="u-full-width" type="name" placeholder="Adult" id="audienceInput">
                     </select>
                 </div>
             </div>
             <label for="descriptionInput">Description</label>
             <textarea class="u-full-width" placeholder="Book Description Here..." id="descriptionInput"></textarea>
             <label class="checkedOutInput">
-              <input type="checkbox">
-              <span class="label-body">Is this book checked out</span>
+                <input type="checkbox">
+                <span class="label-body">Is this book checked out</span>
             </label>
             <input class="button-primary" type="submit" value="Submit">
         </form>
-        <br>
-<br>
+    </div>
+    <br>
+    <br>
     <!--Media Input Form-->
-    <form>
+    <div class="third">
+        <form id="mediaInput" style="display:none;" class="media-div">
             <div class="row">
                 <div class="six columns">
                     <label for="mediaTitleInput">Media Title</label>
@@ -140,30 +147,90 @@
                     <input class="u-full-width" type="name" placeholder="Author/Producer" id="authorInput">
                 </div>
             </div>
-                <div class="row">
+            <div class="row">
                 <div class="six columns">
                     <label for="genreInput">Genre</label>
                     <input class="u-full-width" type="name" placeholder="Fiction" id="genreInput">
                 </div>
                 <div class="six columns">
-                        <label for="audienceInput">Audience</label>
-                        <input class="u-full-width" type="name" placeholder="Adult" id="audienceInput">
+                    <label for="audienceInput">Audience</label>
+                    <input class="u-full-width" type="name" placeholder="Adult" id="audienceInput">
                     </select>
                 </div>
             </div>
             <label for="descriptionInput">Description</label>
             <textarea class="u-full-width" placeholder="Description Here..." id="exampleMessage"></textarea>
             <label class="checkedOutInput">
-              <input type="checkbox">
-              <span class="label-body">Is this book checked out</span>
+                <input type="checkbox">
+                <span class="label-body">Is this book checked out</span>
             </label>
             <input class="button-primary" type="submit" value="Submit">
         </form>
-
     </div>
+
     <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
+
+<script>
+
+    var $button1 = $('.button-user');
+    var $button2 = $('.button-book');
+    var $button3 = $('.button-media');
+
+    var $div1 = $('#userInput');
+    var $div2 = $('#bookInput');
+    var $div3 = $('#mediaInput');
+
+    var toggleDivs = function () {
+        $div1.fadeToggle();
+        $div2.fadeToggle();
+        $div2.fadeToggle();
+    };
+
+    $button1.click(toggleDivs);
+    $button2.click(toggleDivs);
+    $button3.click(toggleDivs);
+
+// $(document).ready(function(){
+
+// 	$('#userInput').click(function(){
+// 		var book = $(this).attr('user-div');
+
+// 		$('#userInput').removeClass('current');
+// 		//$('.tab-content').removeClass('current');
+
+// 		$(this).addClass('current');
+// 		$('#userInput').addClass('current');
+// 	})
+
+// })
+
+
+/*
+    function showUserDiv() {
+        document.getElementById('userInput').style.display = "block";
+        var book = document.getElementById('bookInput');
+        var media = document.getElementById('mediaInput');
+        book.parentNode.removeChild(book);
+        media.parentNode.removeChild(media);
+    }
+    function showBookDiv() {
+        document.getElementById('bookInput').style.display = "block";
+        var user = document.getElementById('userInput');
+        var media = document.getElementById('mediaInput');
+        user.parentNode.removeChild(user);
+        media.parentNode.removeChild(media);
+    }
+    function showMediaDiv() {
+        document.getElementById('mediaInput').style.display = "block";
+        var book = document.getElementById('bookInput');
+        var user = document.getElementById('userInput');
+        book.parentNode.removeChild(book);
+        user.parentNode.removeChild(user);
+    }
+*/
+</script>
 
 
 </html>
