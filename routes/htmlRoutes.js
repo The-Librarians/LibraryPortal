@@ -24,17 +24,17 @@ module.exports = function(app) {
     res.render("librarian", {});
   });
 
-  // app.get("/books/:title", function(req, res) {
-  //   db.Books.findAll({
-  //     where: {
-  //       title: req.params.title
-  //     }
-  //   }).then(function(results) {
-  //     res.render("patrons", {
-  //       books: results
-  //     });
-  //   });
-  // });
+  app.get("/books/title/:title/", function(req,res){
+    db.Books.findAll({
+      where:{
+        title:req.params.title
+      }
+    }).then(function(results){
+      res.render("patrons", {
+        books: results
+      });
+    });
+  });
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
     res.render("404");

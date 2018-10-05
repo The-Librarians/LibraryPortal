@@ -31,7 +31,11 @@
                     </form>
                 </div>
                 <div id="catalog-populate">
-                
+                    {{#each books}}
+                    <p><strong>Title:</strong> {{this.title}}</p>
+                    <p><strong>Author: </strong> {{this.author}}</p>
+                    <p><strong>Description: </strong> {{this.description}}</p>
+                   {{/each}}
                 </div>
             </div>
         </div>
