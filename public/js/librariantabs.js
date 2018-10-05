@@ -1,17 +1,13 @@
-var $button1 = $('.button-user');
-var $button2 = $('.button-book');
-var $button3 = $('.button-media');
+$(document).ready(function(){
+	
+	$('.librarian-button').click(function(){
+		var form_id = $(this).attr('data-tab');
 
-var $div1 = $('#userInput');
-var $div2 = $('#bookInput');
-var $div3 = $('#mediaInput');
+		$('.librarian-form-button').removeClass('current');
+		$('.librarian-form-content').removeClass('current');
 
-var toggleDivs = function () {
-    $div1.fadeToggle();
-    $div2.fadeToggle();
-    $div2.fadeToggle();
-};
+		$(this).addClass('current');
+		$("#"+form_id).addClass('current');
+	})
 
-$button1.click(toggleDivs);
-$button2.click(toggleDivs);
-$button3.click(toggleDivs);
+});
