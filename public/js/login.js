@@ -18,8 +18,7 @@ $(function() {
     event.preventDefault();
    var catalogExplorer = $("#catalog-search-bar").val();
     console.log(catalogExplorer)
+    window.location.href="/books/title/" + catalogExplorer
   })
-  $.ajax("/books/title/" + catalogExplorer)
-  
-  
+   
 });
