@@ -154,14 +154,20 @@ li {
 
 .librarian-form-content {
   display: none;
+  align-content: center;
+  vertical-align: center;
   background: #ffffff;
   padding: 10px;
   margin: 0;
   height: 350px;
-  box-shadow: 6px 6px #51355d;
   border-radius: 1px;
 }
 
-.librarian-div-content.current {
+.librarian-form-content.current {
   display: inherit;
+}
+
+.librarian-welcome {
+  vertical-align: center;
+  background-color: rgb(204, 204, 204);
 }

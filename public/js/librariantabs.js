@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	
-	$('.librarian-form-button').click(function(){
+	$('.librarian-button').click(function(){
 		var form_id = $(this).attr('data-tab');
 
 		$('.librarian-form-button').removeClass('current');
@@ -10,5 +10,4 @@ $(document).ready(function(){
 		$("#"+form_id).addClass('current');
 	})
 
-
-})
+});
