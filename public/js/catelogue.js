@@ -2,8 +2,8 @@ $(document).ready(() => {
 
 
   //form action goes here
-  $(function() {
-    $(".media-book-showcase").on("click", function(event) {
+  $(() => {
+    $(".media-book-showcase").on("click", (event) => {
       let title = $("#title").val().trim();
 
       let author = $("#author").val().trim();
@@ -25,7 +25,7 @@ $(document).ready(() => {
           let title = '';
           let author = '';
 
-          $.get("https://www.googleaois.com/books/v1/volumes?q=" + search, response => {
+          $.get("https://www.googleaois.com/books/v1/volumes?q=" + search, (response) => {
               console.log(response);
 
               for(i=0; i<response.item.length;i++) {
@@ -45,10 +45,10 @@ $(document).ready(() => {
   });
 
 //place to look for my functions
-  function handleResponse( response ) {
-    $.each( response.items, function( i, item ) {
+  handleResponse = ( response ) => {
+    $.each( response.items, ( i, item ) => {
 
-      var title    = item.volumeInfo.title,
+      let title    = item.volumeInfo.title,
           author   = item.volumeInfo.authors[0],
           thumb    = item.volumeInfo.imageLinks.thumbnail;
 
