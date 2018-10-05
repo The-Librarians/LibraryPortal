@@ -10,7 +10,7 @@ module.exports = function(app) {
   });
 
   //Search by Title
-  app.get("api/media/title/:title", function(req,res){
+  app.get("/api/media/title/:title", function(req,res){
     db.Media.findAll({
       where:{
         title:req.params.title
@@ -20,8 +20,8 @@ module.exports = function(app) {
     });
   });
 
-  //Search by Author
-  app.get("api/media/author/:author", function(req,res){
+  // //Search by Author
+  app.get("/api/media/author/:author", function(req,res){
     db.Media.findAll({
       where:{
         author:req.params.author
@@ -31,8 +31,8 @@ module.exports = function(app) {
     });
   });
 
-  //Search by Genre
-  app.get("api/media/genre/:genre", function(req,res){
+  // //Search by Genre
+  app.get("/api/media/genre/:genre", function(req,res){
     db.Media.findAll({
       where:{
         genre:req.params.genre
@@ -59,11 +59,12 @@ module.exports = function(app) {
   });
 
   //Update media
-  app.put("/api/books", function(req, res) {
+  app.put("/api/media", function(req, res) {
     db.Media.update(
       {
         title: req.body.title,
         author: req.body.author,
+        description: req.body.description,
         genre: req.body.genre,
         audience: req.body.audience,
         isCheckedOut:req.body.isCheckedOut

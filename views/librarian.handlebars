@@ -28,19 +28,19 @@
             </div>
 
 
-
+              <!--Create patron -->
             <div id="patron-form" class="first librarian-form-content">
                 <form id="userInput" class="user-div">
                     <div class="row">
 
                         <div class="six columns">
                             <label for="nameInput">Patron's Full Name</label>
-                            <input class="u-full-width" type="name" placeholder="Full Name" id="nameInput">
+                            <input class="u-full-width" id="patronName" type="name" placeholder="Full Name" id="nameInput">
                         </div>
 
                         <div class="six columns">
                             <label for="phoneInput">Phone Number</label>
-                            <input class="u-full-width" type="phone" placeholder="(555)555-5555" id="phoneInput">
+                            <input class="u-full-width" id="patronNumber" type="phone" placeholder="(555)555-5555" id="phoneInput">
                         </div>
 
                     </div>
@@ -49,7 +49,7 @@
 
                         <div class="twelve columns">
                             <label for="cardNumberInput">Card Number</label>
-                            <input class="u-full-width" type="number" placeholder="123" id="cardNumberInput">
+                            <input class="u-full-width" id="cardNumber" type="number" placeholder="123" id="cardNumberInput">
                         </div>
 
                     </div>
@@ -58,7 +58,7 @@
 
                         <div class="six columns">
                             <label for="exampleEmailInput">Email</label>
-                            <input class="u-full-width" type="email" placeholder="test@mailbox.com" id="exampleEmailInput">
+                            <input class="u-full-width" id="patronEmail" type="email" placeholder="test@mailbox.com" id="exampleEmailInput">
                         </div>
 
                         <div class="six columns">
@@ -71,7 +71,7 @@
 
                     </div>
 
-                    <button class="standard-button" type="submit">SUBMIT</button>
+                    <button class="standard-button" id="inputUser" type="submit">SUBMIT</button>
                 </form>
             </div>
 
