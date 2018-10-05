@@ -18,7 +18,31 @@ $(function() {
     event.preventDefault();
    var catalogExplorer = $("#catalog-search-bar").val();
     console.log(catalogExplorer)
+
     window.location.href="/books/title/" + catalogExplorer
   })
+
+  
+    //Add new book1.
+    
+  $("#bookSubmit").on("click", function(event){
+    event.preventDefault();
+    console.log("click");
+    var bookInput = {
+     title : $("#bookTitleInput").val(),
+     author : $("#authorInput").val(),
+     genre : $("#genreInput").val(),
+     audience : $("#audienceInput").val(),
+     description : $("#descriptionInput").val(),
+     isCheckedOut : $("#checkedOut").val(),
+    
+    }
+    $.ajax("/api/books/",{
+      type:"POST",
+      data:bookInput
+    }).then(function(){
+      console.log("book added")
+    })
    
-});
+})
+})
