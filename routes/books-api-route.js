@@ -9,7 +9,7 @@ module.exports = function(app) {
   });
 
   //Search by Title
-  app.get("api/books/title/:title", function(req, res) {
+  app.get("/api/books/title/:title", function(req, res) {
     db.Books.findAll({
       where: {
         title: req.params.title
@@ -19,8 +19,8 @@ module.exports = function(app) {
     });
   });
 
-  //Search by Author
-  app.get("api/books/author/:author", function(req, res) {
+  // //Search by Author
+  app.get("/api/books/author/:author", function(req, res) {
     db.Books.findAll({
       where: {
         author: req.params.author
@@ -30,8 +30,8 @@ module.exports = function(app) {
     });
   });
   
-  //Search by Genre
-  app.get("api/books/genre/:genre", function(req, res) {
+  // //Search by Genre
+  app.get("/api/books/genre/:genre", function(req, res) {
     db.Books.findAll({
       where: {
         genre: req.params.genre

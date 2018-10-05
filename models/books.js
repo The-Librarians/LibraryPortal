@@ -1,5 +1,6 @@
 //Create book model
 module.exports = function(sequelize, DataTypes) {
+  
   var Books = sequelize.define("Books", {
     title: {
       type: DataTypes.STRING,
