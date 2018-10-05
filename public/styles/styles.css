@@ -127,7 +127,6 @@ ul.tabs li{
   padding: 5px 10px;;
   cursor: pointer;
   box-shadow: 2px 0px #51355d;
-
 }
 
 ul.tabs li.current{
@@ -135,7 +134,7 @@ ul.tabs li.current{
   color: #222;
 }
 
-.tab-content{
+.tab-content {
   display: none;
   background: #ffffff;
   padding: 10px;
@@ -143,7 +142,6 @@ ul.tabs li.current{
   height: 350px;
   box-shadow: 6px 6px #51355d;
   border-radius: 1px;
-
 }
 
 .tab-content.current{
@@ -154,3 +152,16 @@ li {
   margin: 0;
 }
 
+.librarian-form-content {
+  display: none;
+  background: #ffffff;
+  padding: 10px;
+  margin: 0;
+  height: 350px;
+  box-shadow: 6px 6px #51355d;
+  border-radius: 1px;
+}
+
+.librarian-div-content.current {
+  display: inherit;
+}
