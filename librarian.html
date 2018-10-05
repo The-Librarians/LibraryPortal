@@ -7,59 +7,209 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <meta charset="utf-8">
     <title>Library Portal</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
-
     <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
-
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="public/styles/reset.css">
     <link rel="stylesheet" href="public/styles/normalize.css">
     <link rel="stylesheet" href="public/styles/skeleton.css">
+    <link rel="stylesheet" href="public/styles/styles.css">
+
 
     <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="icon" type="image/png" href="images/favicon.png">
+    <!-- <link rel="icon" type="image/png" href="images/favicon.png"> -->
+    <script src="jquery-3.3.1.min.js"></script>
 
 </head>
 
 <body>
+    <nav>
+        <div class="container">
+            <a href="/" id="logo">Library Portal</a>
+        </div>
+    </nav>
 
-    <!-- Primary Page Layout
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <div class="container">
         <div class="row">
-            <div class="twelve columns">
-                <h2>Library Portal</h2>
+            <div class="five columns">
+                <button class="standard-button button-user librarian-button" type="submit">Create/Update Patron RECORDS</button>
+                <br>
+                <button class="standard-button button-book librarian-button" type="submit">Create/Update Book Records</button>
+                <br>
+                <button class="standard-button button-media librarian-button" type="submit">Create/Update Media Records</button>
+            </div>
+            <div class="seven columns div-styling">
+                <div class="first">
+                    <form id="userInput" style="display:none" class="user-div">
+                        <div class="row">
+                            <div class="six columns">
+                                <label for="nameInput">Your Full Name</label>
+                                <input class="u-full-width" type="name" placeholder="Full Name" id="nameInput">
+                            </div>
+                            <div class="six columns">
+                                <label for="phoneInput">Phone Number</label>
+                                <input class="u-full-width" type="phone" placeholder="(555)555-5555" id="phoneInput">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="twelve columns">
+                                <label for="cardNumberInput">Card Number</label>
+                                <input class="u-full-width" type="number" placeholder="123" id="cardNumberInput">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="six columns">
+                                <label for="exampleEmailInput">Your email</label>
+                                <input class="u-full-width" type="email" placeholder="test@mailbox.com" id="exampleEmailInput">
+                            </div>
+                            <div class="six columns">
+                                <label for="adultChildInput">Adult or Child</label>
+                                <select class="u-full-width" id="exampleRecipientInput">
+                                    <option value="Option 1">Child</option>
+                                    <option value="Option 2">Adult</option>
+                                </select>
+                            </div>
+                        </div>
+                        <input class="button-primary" type="submit" value="Submit">
+                    </form>
+                </div>
+                <br>
+                <br>
+                <!--Book Input Form-->
+                <div class="second">
+                    <form id="bookInput" style="display:none;" class="book-div">
+                        <div class="row">
+                            <div class="six columns">
+                                <label for="bookTitleInput">Book Title</label>
+                                <input class="u-full-width" type="name" placeholder="Book Title" id="bookTitleInput">
+                            </div>
+                            <div class="six columns">
+                                <label for="authorInput">Author</label>
+                                <input class="u-full-width" type="name" placeholder="Author" id="authorInput">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="six columns">
+                                <label for="genreInput">Book Genre</label>
+                                <input class="u-full-width" type="name" placeholder="Fiction" id="genreInput">
+                            </div>
+                            <div class="six columns">
+                                <label for="audienceInput">Audience</label>
+                                <input class="u-full-width" type="name" placeholder="Adult" id="audienceInput">
+                                </select>
+                            </div>
+                        </div>
+                        <label for="descriptionInput">Description</label>
+                        <textarea class="u-full-width" placeholder="Book Description Here..." id="descriptionInput"></textarea>
+                        <label class="checkedOutInput">
+                            <input type="checkbox">
+                            <span class="label-body">Is this book checked out</span>
+                        </label>
+                        <input class="button-primary" type="submit" value="Submit">
+                    </form>
+                </div>
+                <br>
+                <br>
+                <!--Media Input Form-->
+                <div class="third">
+                    <form id="mediaInput" style="display:none;" class="media-div">
+                        <div class="row">
+                            <div class="six columns">
+                                <label for="mediaTitleInput">Media Title</label>
+                                <input class="u-full-width" type="name" placeholder="Media Title" id="mediaTitleInput">
+                            </div>
+                            <div class="six columns">
+                                <label for="authorInput">Author/Producer</label>
+                                <input class="u-full-width" type="name" placeholder="Author/Producer" id="authorInput">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="six columns">
+                                <label for="genreInput">Genre</label>
+                                <input class="u-full-width" type="name" placeholder="Fiction" id="genreInput">
+                            </div>
+                            <div class="six columns">
+                                <label for="audienceInput">Audience</label>
+                                <input class="u-full-width" type="name" placeholder="Adult" id="audienceInput">
+                                </select>
+                            </div>
+                        </div>
+                        <label for="descriptionInput">Description</label>
+                        <textarea class="u-full-width" placeholder="Description Here..." id="exampleMessage"></textarea>
+                        <label class="checkedOutInput">
+                            <input type="checkbox">
+                            <span class="label-body">Is this book checked out</span>
+                        </label>
+                        <input class="button-primary" type="submit" value="Submit">
+                    </form>
+                </div>
             </div>
         </div>
-    <div class="row">
-          <div class="five columns" style="margin-left: 10px">
-            <h2>Welcome,
-                <!--Librarian Placeholder-->
-            </h2>
 
-            <!--HandleBar Stats Placeholder-->
-        </div>
-        <div class="six columns">
-
-            <input id="update-patron" class="button-primary" type="submit" value="Create/Update Patron">
-<br>
-            <input id="update-item" class="button-primary" type="submit" value="Create/Update Item Records">
+<script>
 
 
-        </div>
-    </div>
-    </div>
-    <!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-</body>
+
+    var $div1 = $('#userInput');
+    var $div2 = $('#bookInput');
+    var $div3 = $('#mediaInput');
+
+    var toggleDivs = function () {
+        $div1.fadeToggle();
+        $div2.fadeToggle();
+        $div2.fadeToggle();
+    };
+
+    $button1.click(toggleDivs);
+    $button2.click(toggleDivs);
+    $button3.click(toggleDivs);
+
+// $(document).ready(function(){
+
+// 	$('#userInput').click(function(){
+// 		var book = $(this).attr('user-div');
+
+// 		$('#userInput').removeClass('current');
+// 		//$('.tab-content').removeClass('current');
+
+// 		$(this).addClass('current');
+// 		$('#userInput').addClass('current');
+// 	})
+
+// })
+
+
+/*
+    function showUserDiv() {
+        document.getElementById('userInput').style.display = "block";
+        var book = document.getElementById('bookInput');
+        var media = document.getElementById('mediaInput');
+        book.parentNode.removeChild(book);
+        media.parentNode.removeChild(media);
+    }
+    function showBookDiv() {
+        document.getElementById('bookInput').style.display = "block";
+        var user = document.getElementById('userInput');
+        var media = document.getElementById('mediaInput');
+        user.parentNode.removeChild(user);
+        media.parentNode.removeChild(media);
+    }
+    function showMediaDiv() {
+        document.getElementById('mediaInput').style.display = "block";
+        var book = document.getElementById('bookInput');
+        var user = document.getElementById('userInput');
+        book.parentNode.removeChild(book);
+        user.parentNode.removeChild(user);
+    }
+*/
+</script>
 
 
 </html>

@@ -1,0 +1,127 @@
+<nav>
+    <div class="container">
+        <a href="/" id="logo">Library Portal</a>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row">
+        <div class="five columns">
+            <button class="standard-button button-user librarian-button" type="submit">Create/Update Patron RECORDS</button>
+            <br>
+            <button class="standard-button button-book librarian-button" type="submit">Create/Update Book Records</button>
+            <br>
+            <button class="standard-button button-media librarian-button" type="submit">Create/Update Media Records</button>
+        </div>
+        <div class="seven columns div-styling">
+            <div class="first">
+                <form id="userInput" style="display:none" class="user-div">
+                    <div class="row">
+                        <div class="six columns">
+                            <label for="nameInput">Your Full Name</label>
+                            <input class="u-full-width" type="name" placeholder="Full Name" id="nameInput">
+                        </div>
+                        <div class="six columns">
+                            <label for="phoneInput">Phone Number</label>
+                            <input class="u-full-width" type="phone" placeholder="(555)555-5555" id="phoneInput">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="twelve columns">
+                            <label for="cardNumberInput">Card Number</label>
+                            <input class="u-full-width" type="number" placeholder="123" id="cardNumberInput">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="six columns">
+                            <label for="exampleEmailInput">Your email</label>
+                            <input class="u-full-width" type="email" placeholder="test@mailbox.com" id="exampleEmailInput">
+                        </div>
+                        <div class="six columns">
+                            <label for="adultChildInput">Adult or Child</label>
+                            <select class="u-full-width" id="exampleRecipientInput">
+                                <option value="Option 1">Child</option>
+                                <option value="Option 2">Adult</option>
+                            </select>
+                        </div>
+                    </div>
+                    <input class="button-primary" type="submit" value="Submit">
+                </form>
+            </div>
+            <br>
+            <br>
+            <!--Book Input Form-->
+            <div class="second">
+                <form id="bookInput" style="display:none;" class="book-div">
+                    <div class="row">
+                        <div class="six columns">
+                            <label for="bookTitleInput">Book Title</label>
+                            <input class="u-full-width" type="name" placeholder="Book Title" id="bookTitleInput">
+                        </div>
+                        <div class="six columns">
+                            <label for="authorInput">Author</label>
+                            <input class="u-full-width" type="name" placeholder="Author" id="authorInput">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="six columns">
+                            <label for="genreInput">Book Genre</label>
+                            <input class="u-full-width" type="name" placeholder="Fiction" id="genreInput">
+                        </div>
+                        <div class="six columns">
+                            <label for="audienceInput">Audience</label>
+                            <input class="u-full-width" type="name" placeholder="Adult" id="audienceInput">
+                            </select>
+                        </div>
+                    </div>
+                    <label for="descriptionInput">Description</label>
+                    <textarea class="u-full-width" placeholder="Book Description Here..." id="descriptionInput"></textarea>
+                    <label class="checkedOutInput">
+                        <input type="checkbox">
+                        <span class="label-body">Is this book checked out</span>
+                    </label>
+                    <input class="button-primary" type="submit" value="Submit">
+                </form>
+            </div>
+            <br>
+            <br>
+            <!--Media Input Form-->
+            <div class="third">
+                <form id="mediaInput" style="display:none;" class="media-div">
+                    <div class="row">
+                        <div class="six columns">
+                            <label for="mediaTitleInput">Media Title</label>
+                            <input class="u-full-width" type="name" placeholder="Media Title" id="mediaTitleInput">
+                        </div>
+                        <div class="six columns">
+                            <label for="authorInput">Author/Producer</label>
+                            <input class="u-full-width" type="name" placeholder="Author/Producer" id="authorInput">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="six columns">
+                            <label for="genreInput">Genre</label>
+                            <input class="u-full-width" type="name" placeholder="Fiction" id="genreInput">
+                        </div>
+                        <div class="six columns">
+                            <label for="audienceInput">Audience</label>
+                            <input class="u-full-width" type="name" placeholder="Adult" id="audienceInput">
+                            </select>
+                        </div>
+                    </div>
+                    <label for="descriptionInput">Description</label>
+                    <textarea class="u-full-width" placeholder="Description Here..." id="exampleMessage"></textarea>
+                    <label class="checkedOutInput">
+                        <input type="checkbox">
+                        <span class="label-body">Is this book checked out</span>
+                    </label>
+                    <input class="button-primary" type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <!--User Input Form-->
+
+</div>

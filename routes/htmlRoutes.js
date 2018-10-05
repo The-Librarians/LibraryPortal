@@ -8,20 +8,24 @@ module.exports = function(app) {
   });
 
   //Load all users
-  app.get("/users", function(req, res) {
-    db.User.findAll({}).then(function(results) {
+  app.get("/users/:id", function(req, res) {
+    db.User.findOne({
+      where:{
+        id: req.params.id
+      }
+    }).then(function(results) {
       res.render("patrons", {
         newUser: results
       });
     });
   });
 
-  // //app.get("/users", function(req,res){
-  //   res.render("patrons", {
+  app.get("/books", function(req,res){
+    res.render("librarian", {
       
-  //   })
+    })
       
-  // })
+  })
 
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
