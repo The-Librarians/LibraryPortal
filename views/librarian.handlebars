@@ -35,12 +35,12 @@
 
                         <div class="six columns">
                             <label for="nameInput">Patron's Full Name</label>
-                            <input class="u-full-width" id="patronName" type="name" placeholder="Full Name" id="nameInput">
+                            <input class="u-full-width"  type="name" placeholder="Full Name" id="nameInput">
                         </div>
 
                         <div class="six columns">
                             <label for="phoneInput">Phone Number</label>
-                            <input class="u-full-width" id="patronNumber" type="phone" placeholder="(555)555-5555" id="phoneInput">
+                            <input class="u-full-width" type="phone" placeholder="(555)555-5555" id="phoneInput">
                         </div>
 
                     </div>
@@ -112,11 +112,11 @@
                     <textarea class="u-full-width" placeholder="Book Description Here..." id="descriptionInput"></textarea>
 
                     <label class="checkedOutInput">
-                        <input type="checkbox">
-                        <span class="label-body">This item is checked out.</span>
+                        <input type="checkbox" id="checkedOut" value="true">
+                        <span class="label-body" >This item is checked out.</span>
                     </label>
 
-                    <button class="standard-button" type="submit">SUBMIT</button>
+                    <button class="standard-button" id="bookSubmit" type="submit">SUBMIT</button>
                 </form>
             </div>
 
