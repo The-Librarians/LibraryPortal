@@ -8,10 +8,11 @@ module.exports = function(app) {
   });
 
   //Load all users
-  app.get("/users/:id", function(req, res) {
+  app.get("/users/:cardNumber", function(req, res) {
+    console.log (req.params)
     db.User.findOne({
       where:{
-        id: req.params.id
+        cardNumber: req.params.cardNumber
       }
     }).then(function(results) {
       res.render("patrons", {
@@ -20,8 +21,9 @@ module.exports = function(app) {
     });
   });
 
-  app.get("/books", function(req,res){
+  app.get("/books/", function(req,res){
     res.render("librarian", {
+      
       
     })
       
