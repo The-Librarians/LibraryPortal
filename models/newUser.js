@@ -36,6 +36,20 @@ module.exports = function(sequelize, DataTypes) {
     isAdult: {
       type:DataTypes.BOOLEAN,
       allowNull: false,
+    },
+    itemsOut:{
+      type: DataTypes.STRING,
+      allowNull: true,
+      validate:{
+        len: [1, 150]
+      }
+    },
+    history:{
+      type: DataTypes.STRING,
+      allowNull: true,
+      validate:{
+        len: [1,150]
+      }
     }
   });
   return User;
