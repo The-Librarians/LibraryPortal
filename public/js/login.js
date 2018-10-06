@@ -19,9 +19,15 @@ $(function () {
     var currentLocation = window.location.href
     console.log(currentLocation);
     var catalogExplorer = $("#catalog-search-bar").val();
-    console.log(catalogExplorer)
- 
-    location.assign(currentLocation  + "/books/title/" + catalogExplorer);
+    console.log(catalogExplorer);
+
+    window.location.href = "/books/title/" + catalogExplorer;
   })
+
+  $("#goToSearch").on("click", function (event) {
+    event.preventDefault();
+    window.location.href = "/books/title";
+
   });
+});
 

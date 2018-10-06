@@ -1,16 +1,13 @@
 var db = require("../models");
 
-module.exports = function(app) {
-
+module.exports = function (app) {
   // Load index page
-  app.get("/", function(req, res) {
-    db.Books.findAll({
-      limit: 15
-    }).then(function(results){
+  app.get("/", function (req, res) {
+    db.Books.findAll({}).then(function (results) {
       res.render("index", {
-        books:results
+        books: results
       });
-      
+
     })
   });
 
@@ -21,33 +18,21 @@ module.exports = function(app) {
       where: {
         cardNumber: req.params.cardNumber
       }
-    }).then(function(results) {
+    }).then(function (results) {
       res.render("patrons", {
         newUser: results
       });
     });
   });
 
-  
+
   
 //Route for Librarian
   app.get("/books/", function(req, res) {
     res.render("librarian", {});
   });
 
-  
-  //Route to show Recently Added list
-  app.get("/books/title/:title/", function(req,res){
-    db.Books.findAll({
-      where:{
-        title:req.params.title
-      }
-    }).then(function(results){
-      res.render("patrons", {
-        books: results
-      });
-    });
-  });
+
 
   //Route for Items Out
   app.get("/users/itemsOut/", function(req,res){
@@ -74,8 +59,27 @@ module.exports = function(app) {
       })
     })
   })
-  // Render 404 page for any unmatched routes
-  app.get("*", function(req, res) {
+
+  app.get("/books/title/", function(req, res) {
+    res.render("catalog", {});
+  });
+
+  app.get("/books/title/:title", function(req,res){
+    db.Books.findAll({
+      where:{
+        title:req.params.title
+      }
+    }).then(function(results){
+      res.render("catalog", {
+        books: results
+      });
+    });
+  });
+
+   // Render 404 page for any unmatched routes
+   app.get("*", function (req, res) {
     res.render("404");
   });
-};
+
+
+}
