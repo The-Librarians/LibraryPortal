@@ -165,6 +165,7 @@ li {
 
 .librarian-form-content.current {
   display: inherit;
+  background-color: rgb(204, 204, 204);
 }
 
 .librarian-welcome {
