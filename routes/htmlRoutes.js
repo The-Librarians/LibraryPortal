@@ -3,7 +3,18 @@ var db = require("../models");
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
-    res.render("index", {});
+    db.Books.findAll({
+      where: {
+        createdAt: {
+          [op.gt]:"2018-"
+        }
+      }
+    })
+      res.render("index", {
+        books:results
+      });
+      
+    })
   });
 
   //Load all users
@@ -19,6 +30,8 @@ module.exports = function(app) {
       });
     });
   });
+
+  
 
   app.get("/books/", function(req, res) {
     res.render("librarian", {});
