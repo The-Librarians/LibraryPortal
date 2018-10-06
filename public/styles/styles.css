@@ -95,7 +95,7 @@ nav {
 /* Patron info */
 #patron-info {
   /* min-height: 200px; */
-  margin-bottom: 60px;
+  margin-bottom: 25px;
   text-align: center;
   line-height: 0px;
   background-color: #1a797e;
@@ -108,10 +108,10 @@ nav {
   margin: 0;
 }
 
-#patron-info-div {
+/* #patron-info-div {
   margin-bottom: 20px;
   
-}
+} */
 
 /* Tabs */
 ul.tabs{
@@ -171,4 +171,14 @@ li {
 .librarian-welcome {
   vertical-align: center;
   background-color: rgb(204, 204, 204);
+}
+
+#goToSearch {
+  margin-bottom: 25px;
+  box-shadow: 4px 4px #51355d;
+}
+
+
+#goToSearch:hover {
+  box-shadow: 4px 4px #51355d;
 }
