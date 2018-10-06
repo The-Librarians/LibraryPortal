@@ -33,10 +33,10 @@ module.exports = function(sequelize, DataTypes) {
       validate: {
         len: [1, 150]
       }
-    },
-    isCheckedOut: {
-      type:DataTypes.BOOLEAN,
-      allowNull:false
+    // },
+    // isCheckedOut: {
+    //   type:DataTypes.BOOLEAN,
+    //   allowNull:false
     }
   });
   return Media;

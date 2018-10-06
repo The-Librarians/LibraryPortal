@@ -56,7 +56,7 @@ $(document).ready(function () {
 			genre: $("#genreInput").val(),
 			audience: $("#audienceInput").val(),
 			description: $("#descriptionInput").val(),
-			isCheckedOut: $("#checkedOut").val()
+			// isCheckedOut: $("#checkedOut").val()
 		}
 		$.ajax("/api/books/", {
 			type: "POST",
@@ -76,6 +76,7 @@ $(document).ready(function () {
 			description: $("#mediaDescriptionInput").val(),
 			genre: $("#mediaGenreInput").val(),
 			audience: $("#mediaAudienceInput").val(),
+			// isCheckedOut: $("#mediaCheck")
 		}
 
 		$.ajax("/api/media/", {
