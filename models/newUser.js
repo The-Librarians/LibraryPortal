@@ -29,13 +29,6 @@ module.exports = function(sequelize, DataTypes) {
         isInt: true
       }
     },
-    password: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [1, 150]
-      }
-    },
     isChild:{
       type: DataTypes.BOOLEAN,
       allowNull: false,

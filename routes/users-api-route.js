@@ -15,7 +15,6 @@ module.exports = function(app) {
       phone: req.body.phone,
       email: req.body.email,
       cardNumber: req.body.cardNumber,
-      password: req.body.password,
       isChild: req.body.isChild,
       isAdult: req.body.isAdult
     }).then(function(results) {
@@ -31,7 +30,6 @@ module.exports = function(app) {
         phone: req.body.phone,
         email: req.body.email,
         cardNumber: req.body.cardNumber,
-        password: req.body.password,
         isChild: req.body.isChild,
         isAdult: req.body.isAdult
 
