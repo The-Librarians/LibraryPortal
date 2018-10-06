@@ -27,7 +27,7 @@
                     <form>
                         <input type="search" placeholder="Find your next adventure..." id="catalog-search-bar">
                         <br>
-                        <button class="standard-button" id="catalogExplorer"> EXPLORE</button>
+                        <button class="standard-button" id="catalogExplorer" type="submit"> EXPLORE</button>
                     </form>
                 </div>
                 <div id="catalog-populate">
@@ -51,7 +51,13 @@
                     </ul>
 
                     <div id="tab-1" class="tab-content current">
-                        Items Out
+                       
+                        <br>
+                        <br>
+                        <li>
+                        {{newUser.itemsOut}}
+                        </li>
+                        
                     </div>
 
                     <div id="tab-2" class="tab-content">
@@ -65,7 +71,16 @@
                     </div>
 
                     <div id="tab-3" class="tab-content">
+<<<<<<< HEAD
                         Historyte
+=======
+                     
+                        <br>
+                        <br>
+                        <li>
+                            {{newUser.history}}
+                        </li>
+>>>>>>> aad9773c913126d0b27a12f74550f2c1c5e1a085
                     </div>
 
                 </div>

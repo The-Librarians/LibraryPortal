@@ -76,6 +76,8 @@ $(document).ready(function () {
 			description: $("#mediaDescriptionInput").val(),
 			genre: $("#mediaGenreInput").val(),
 			audience: $("#mediaAudienceInput").val(),
+			isCheckedOut: $("#mediaCheck").val(),
+
 		}
 
 		$.ajax("/api/media/", {

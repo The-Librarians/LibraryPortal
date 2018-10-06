@@ -16,10 +16,12 @@ $(function () {
 
   $("#catalogExplorer").on("click", function (event) {
     event.preventDefault();
+    var currentLocation = window.location.href
+    console.log(currentLocation);
     var catalogExplorer = $("#catalog-search-bar").val();
     console.log(catalogExplorer)
-
-    window.location.href = "/books/title/" + catalogExplorer
+ 
+    location.assign(currentLocation  + "/books/title/" + catalogExplorer);
   })
+  });
 
-})
