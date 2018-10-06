@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	
+
 	$('ul.tabs li').click(function(){
 		var tab_id = $(this).attr('data-tab');
 
@@ -10,4 +10,8 @@ $(document).ready(function(){
 		$("#"+tab_id).addClass('current');
 	})
 
+	$('#wishlist-tab').click(function(event){
+		event.preventDefault();
+		console.log(event);
+	});
 })

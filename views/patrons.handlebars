@@ -9,14 +9,14 @@
     <!-- columns should be the immediate child of a .row -->
     <div id="patron-info">
         <div class="row">
-           
+
             <h1 class="patron-info-items">Welcome, <span id="patron-name"> {{newUser.name}} </span>!</h1>
 
             <br>
             <h4 class="patron-info-items">Card number: <span id="patron-cardno">{{newUser.cardNumber}}</span></h4>
             <br>
             <h5 class="patron-info-items">Patron since: <span id="patron-add-date">{{newUser.createdAt}}</span></h5>
-            
+
         </div>
     </div>
     <h3>Catalog Search —</h3>
@@ -46,18 +46,26 @@
                 <div class="patron-tabs">
                     <ul class="tabs">
                         <li class="tab-link current" data-tab="tab-1">Items Out</li>
-                        <li class="tab-link" data-tab="tab-2">Wishlist</li>
+                        <li class="tab-link" data-tab="tab-2" id="wishlist-tab">Wishlist</li>
                         <li class="tab-link" data-tab="tab-3">History</li>
                     </ul>
 
                     <div id="tab-1" class="tab-content current">
                         Items Out
                     </div>
+
                     <div id="tab-2" class="tab-content">
                         Wishlist
+
+                        <div id="wishlist-text-area">
+                          <ul>
+                            <li>Example</li>
+                          </ul>
+                        </div>
                     </div>
+
                     <div id="tab-3" class="tab-content">
-                        History
+                        Historyte
                     </div>
 
                 </div>
