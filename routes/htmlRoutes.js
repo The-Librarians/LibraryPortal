@@ -47,4 +47,18 @@ module.exports = function (app) {
   app.get("*", function (req, res) {
     res.render("404");
   });
-};
+
+  app.get("/books/title/:title/", function(req,res){
+    db.Books.findAll({
+      where:{
+        title:req.params.title
+      }
+    }).then(function(results){
+      res.render("catalog", {
+        books: results
+      });
+    });
+  });
+  
+
+}
