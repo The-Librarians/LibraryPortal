@@ -20,10 +20,16 @@ module.exports = function(app) {
     });
   });
 
-  app.get("/books/", function(req, res) {
-    res.render("librarian", {});
+  app.get("/", function(req, res) {
+    db.Books.findAll({}).then(function(results){
+      res.render("index", {
+        books: results
+      })
+    })
+    
   });
 
+  //Route to load books on Search
   app.get("/books/title/:title/", function(req,res){
     db.Books.findAll({
       where:{
