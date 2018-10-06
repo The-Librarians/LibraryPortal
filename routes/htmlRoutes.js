@@ -1,55 +1,50 @@
 var db = require("../models");
 
-module.exports = function(app) {
+module.exports = function (app) {
   // Load index page
-  app.get("/", function(req, res) {
-    db.Books.findAll({
-      where: {
-        createdAt: {
-          [op.gt]:"2018-"
-        }
-      }
-    })
+  app.get("/", function (req, res) {
+    db.Books.findAll({}).then(function (results) {
       res.render("index", {
-        books:results
+        books: results
       });
-      
+
     })
   });
 
+
   //Load all users
-  app.get("/users/:cardNumber", function(req, res) {
+  app.get("/users/:cardNumber", function (req, res) {
     console.log(req.params);
     db.User.findOne({
       where: {
         cardNumber: req.params.cardNumber
       }
-    }).then(function(results) {
+    }).then(function (results) {
       res.render("patrons", {
         newUser: results
       });
     });
   });
 
-  
 
-  app.get("/books/", function(req, res) {
+
+  app.get("/books/", function (req, res) {
     res.render("librarian", {});
   });
 
-  app.get("/books/title/:title/", function(req,res){
+  app.get("/books/title/:title/", function (req, res) {
     db.Books.findAll({
-      where:{
-        title:req.params.title
+      where: {
+        title: req.params.title
       }
-    }).then(function(results){
+    }).then(function (results) {
       res.render("patrons", {
         books: results
       });
     });
   });
   // Render 404 page for any unmatched routes
-  app.get("*", function(req, res) {
+  app.get("*", function (req, res) {
     res.render("404");
   });
 };
