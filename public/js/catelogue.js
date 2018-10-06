@@ -1,5 +1,11 @@
 $(document).ready(() => {
 
+  $(function(){
+    $(".standard-button").on("click", function(event){
+      $("#exampleRecipientInput").val()
+    })
+  })
+
 
   //form action goes here
   $(() => {
