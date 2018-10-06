@@ -11,9 +11,8 @@ module.exports = function (app) {
     })
   });
 
-
-  //Load all users
-  app.get("/users/:cardNumber", function (req, res) {
+  //Login Screen with cardNumber
+  app.get("/users/:cardNumber", function(req, res) {
     console.log(req.params);
     db.User.findOne({
       where: {
@@ -26,13 +25,16 @@ module.exports = function (app) {
     });
   });
 
-
-
-  app.get("/books/", function (req, res) {
+  
+  
+//Route for Librarian
+  app.get("/books/", function(req, res) {
     res.render("librarian", {});
   });
 
-  app.get("/books/title/:title/", function (req, res) {
+  
+  //Route to show Recently Added list
+  app.get("/books/title/:title/", function(req,res){
     db.Books.findAll({
       where: {
         title: req.params.title
@@ -43,6 +45,32 @@ module.exports = function (app) {
       });
     });
   });
+
+  //Route for Items Out
+  app.get("/users/itemsOut/", function(req,res){
+    db.User.findAll({
+      where: {
+        itemsOut:req.params.itemsOut
+      }
+    }).then(function(results){
+      res.render("patrons", {
+        newUser:results
+      });
+    });
+  });
+
+  //Route for history
+  app.get("/users/history/", function(req,res){
+    db.User.findAll({
+      where:{
+        history:req.params.history
+      }
+    }).then(function(results){
+      res.render("patrons", {
+        books:results
+      })
+    })
+  })
   // Render 404 page for any unmatched routes
   app.get("*", function (req, res) {
     res.render("404");

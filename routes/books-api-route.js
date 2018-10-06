@@ -9,7 +9,7 @@ module.exports = function(app) {
   });
 
   //Search by Title
-  app.get("/api/books/title/:title", function(req, res) {
+  app.get("/api/books/title/:title/", function(req, res) {
     db.Books.findAll({
       where: {
         title: req.params.title
