@@ -21,9 +21,6 @@ VALUE ("The Tommyknockers", "King, Steven", "Something was happening in Bobbi An
        ("A Wrinkle in Time", "L'Engle, Madeleine", "Meg Murry, her little brother Charles Wallace, and their mother are having a midnight snack on a dark and stormy night when an unearthly stranger appears at their door. He claims to have been blown off course and goes on to tell them that there is such a thing as a tesseract, which, if you didn't know, is a wrinkle in time. Meg's father had been experimenting with time travel when he suddenly disappeared. Will Meg, Charles Wallace, and their friend Calvin outwit the forces of evil as they search through space for their father?", "Mystery", "Children",  "2018-10-01 6:23:00", "2018-10-01 6:23:00"),
        ("You Don't Know Everything, Jilly P!", "Gino, Alex", "A big fantasy reader, Jilly makes a connection online with another fantasy fan, Derek, who is a Deaf, Black ASL user. She goes to Derek for help with Emma but doesn't always know the best way or time to ask for it. As she and Derek meet in person, have some really fun conversations, and become friends, Jilly makes some mistakes . . . but comes to understand that it's up to her, not Derek to figure out how to do better next time--especially when she wants to be there for Derek the most.", "Drama", "Children",  "2018-10-01 6:23:00", "2018-10-01 6:23:00"),
        ("Monstrous Devices", "Love, Damien", "On a winter’s day in a British town, twelve-year old Alex receives a package in the mail: an old tin robot from his grandfather. “This one is special,” says the enclosed note, and when strange events start occurring around him, Alex suspects this small toy is more than special; it might be deadly.", "Mystery", "Children",  "2018-10-01 6:23:00", "2018-10-01 6:23:00")
-<<<<<<< HEAD
 	
-=======
->>>>>>> aad9773c913126d0b27a12f74550f2c1c5e1a085
        
        

@@ -21,6 +21,7 @@
     </div>
 
     <div id='patron-side'>
+        <button class="standard-button twelve columns" id="goToSearch">SEARCH OUR CATALOG</button>
 
         <div class="patron-tabs">
             <ul class="tabs">
@@ -30,13 +31,21 @@
             </ul>
 
             <div id="tab-1" class="tab-content current">
-                Items Out
+                <br><br>
+                
+                <li>
+                {{newUser.itemsOut}}
+                </li>
             </div>
             <div id="tab-2" class="tab-content">
-                Wishlist
+                
             </div>
             <div id="tab-3" class="tab-content">
-                History
+                <br><br>
+                
+                <li>
+                {{newUser.history}}
+                </li>
             </div>
 
         </div>

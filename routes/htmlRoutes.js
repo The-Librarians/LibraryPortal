@@ -25,26 +25,14 @@ module.exports = function (app) {
     });
   });
 
-  
+
   
 //Route for Librarian
   app.get("/books/", function(req, res) {
     res.render("librarian", {});
   });
 
-  
-  //Route to show Recently Added list
-  app.get("/books/title/:title/", function(req,res){
-    db.Books.findAll({
-      where: {
-        title: req.params.title
-      }
-    }).then(function (results) {
-      res.render("patrons", {
-        books: results
-      });
-    });
-  });
+
 
   //Route for Items Out
   app.get("/users/itemsOut/", function(req,res){
@@ -71,12 +59,12 @@ module.exports = function (app) {
       })
     })
   })
-  // Render 404 page for any unmatched routes
-  app.get("*", function (req, res) {
-    res.render("404");
+
+  app.get("/books/title/", function(req, res) {
+    res.render("catalog", {});
   });
 
-  app.get("/books/title/:title/", function(req,res){
+  app.get("/books/title/:title", function(req,res){
     db.Books.findAll({
       where:{
         title:req.params.title
@@ -87,6 +75,11 @@ module.exports = function (app) {
       });
     });
   });
-  
+
+   // Render 404 page for any unmatched routes
+   app.get("*", function (req, res) {
+    res.render("404");
+  });
+
 
 }
